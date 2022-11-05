@@ -1,0 +1,5 @@
+﻿l_english:
+  molon_labe_requires_actor_not_fanatic_xenophobe: "$TRIGGER_FAIL$§RThey are §YFanatic Xenophobes§! and will never submit to us willingly.§!"
+  molon_labe_requires_actor_not_fanatic_egalitarian: "$TRIGGER_FAILS$§RThey are §YFanatic Egalitarians§! and will never give up their freedom willingly.§!"
+  molon_labe_requires_actor_not_xenophobe: "$TRIGGER_FAIL$§RWe are §YXenophobes§! and will never offer ourselves up to the alien willingly.§!"
+  molon_labe_requires_actor_not_egalitarian: "$TRIGGER_FAIL$§RWe are free §YEgalitarians§! and will never abandon our sovereignty so willingly.§!"
