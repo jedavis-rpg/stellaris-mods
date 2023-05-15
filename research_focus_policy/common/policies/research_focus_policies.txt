@@ -1,0 +1,310 @@
+##########################################################################
+# Empire Policies
+#
+# #####
+#
+# AI:
+# Base AI-weight is 100, if unchanged
+# AI will grab whatever policy-option has the highest weight
+#
+# #####
+#
+##########################################################################
+
+physics_focus = {
+	potential = {
+		OR = {
+			is_country_type = default
+			is_country_type = fallen_empire
+			is_country_type = awakened_fallen_empire
+			is_country_type = primitive
+			is_country_type = awakened_marauders
+		}
+	}
+
+	option = {
+		name = "physics_focus_none"
+
+		policy_flags = {
+			physics_focus_none
+		}
+
+		modifier = {
+			country_physics_tech_research_speed = 0.04
+		}
+
+		AI_weight = {
+			factor = 5 #This should make sure AIs stick to this policy
+		}
+	}
+
+	option = {
+		name = "physics_focus_computing"
+
+		policy_flags = {
+			physics_focus_computing
+		}
+
+		modifier = {
+			category_computing_research_speed_mult = 0.15
+			category_computing_draw_chance_mult = 0.25
+		}
+
+		AI_weight = {
+			factor = 0 #This should make sure AIs don't use this policy
+		}
+	}
+
+	option = {
+		name = "physics_focus_field_manipulation"
+
+		policy_flags = {
+			physics_focus_field_manipulation
+		}
+
+		modifier = {
+			category_field_manipulation_research_speed_mult = 0.15
+			category_field_manipulation_draw_chance_mult = 0.25
+		}
+
+		AI_weight = {
+			factor = 0 #This should make sure AIs don't use this policy
+		}
+	}
+
+	option = {
+		name = "physics_focus_particles"
+
+		policy_flags = {
+			physics_focus_particles
+		}
+
+		modifier = {
+			category_particles_research_speed_mult = 0.15
+			category_particles_draw_chance_mult = 0.25
+		}
+
+		AI_weight = {
+			factor = 0 #This should make sure AIs don't use this policy
+		}
+	}
+}
+
+society_focus = {
+	potential = {
+		OR = {
+			is_country_type = default
+			is_country_type = fallen_empire
+			is_country_type = awakened_fallen_empire
+			is_country_type = primitive
+			is_country_type = awakened_marauders
+		}
+	}
+
+	option = {
+		name = "society_focus_none"
+
+		policy_flags = {
+			society_focus_none
+		}
+
+		modifier = {
+			country_society_tech_research_speed = 0.04
+		}
+
+		AI_weight = {
+			factor = 5 #This should make sure AIs stick to this policy
+		}
+	}
+
+	option = {
+		name = "society_focus_archaeostudies"
+
+		potential = {
+			has_ancrel = yes
+		}
+
+		valid = {
+			has_technology = tech_archeology_lab_ancrel
+		}
+
+		policy_flags = {
+			society_focus_archaeostudies
+		}
+
+		modifier = {
+			category_archaeostudies_research_speed_mult = 0.15
+			category_archaeostudies_draw_chance_mult = 0.25
+		}
+
+		AI_weight = {
+			factor = 0 #This should make sure AIs don't use this policy
+		}
+	}
+	option = {
+		name = "society_focus_biology"
+
+		policy_flags = {
+			society_focus_biology
+		}
+
+		modifier = {
+			category_biology_research_speed_mult = 0.15
+			category_biology_draw_chance_mult = 0.25
+		}
+
+		AI_weight = {
+			factor = 0 #This should make sure AIs don't use this policy
+		}
+	}
+
+	option = {
+		name = "society_focus_military_theory"
+
+		policy_flags = {
+			society_focus_military_theory
+		}
+
+		modifier = {
+			category_military_theory_research_speed_mult = 0.15
+			category_military_theory_draw_chance_mult = 0.25
+		}
+
+		AI_weight = {
+			factor = 0 #This should make sure AIs don't use this policy
+		}
+	}
+
+	option = {
+		name = "society_focus_new_worlds"
+
+		policy_flags = {
+			society_focus_new_worlds
+		}
+
+		modifier = {
+			category_new_worlds_research_speed_mult = 0.15
+			category_new_worlds_draw_chance_mult = 0.25
+		}
+
+		AI_weight = {
+			factor = 0 #This should make sure AIs don't use this policy
+		}
+	}
+	option = {
+		name = "society_focus_psionics"
+
+		valid = {
+			has_technology = tech_psionic_theory
+		}
+
+		policy_flags = {
+			society_focus_psionics
+		}
+
+		modifier = {
+			category_psionics_research_speed_mult = 0.15
+			category_psionics_draw_chance_mult = 0.25
+		}
+
+		AI_weight = {
+			factor = 0 #This should make sure AIs don't use this policy
+		}
+	}
+}
+
+engineering_focus = {
+	potential = {
+		OR = {
+			is_country_type = default
+			is_country_type = fallen_empire
+			is_country_type = awakened_fallen_empire
+			is_country_type = primitive
+			is_country_type = awakened_marauders
+		}
+	}
+
+	option = {
+		name = "engineering_focus_none"
+
+		policy_flags = {
+			engineering_focus_none
+		}
+
+		modifier = {
+			country_engineering_tech_research_speed = 0.04
+		}
+
+		AI_weight = {
+			factor = 5 #This should make sure AIs stick to this policy
+		}
+	}
+
+	option = {
+		name = "engineering_focus_industry"
+
+		policy_flags = {
+			engineering_focus_industry
+		}
+
+		modifier = {
+			category_industry_research_speed_mult = 0.15
+			category_industry_draw_chance_mult = 0.25
+		}
+
+		AI_weight = {
+			factor = 0 #This should make sure AIs don't use this policy
+		}
+	}
+
+	option = {
+		name = "engineering_focus_materials"
+
+		policy_flags = {
+			engineering_focus_materials
+		}
+
+		modifier = {
+			category_materials_research_speed_mult = 0.15
+			category_materials_draw_chance_mult = 0.25
+		}
+
+		AI_weight = {
+			factor = 0 #This should make sure AIs don't use this policy
+		}
+	}
+
+	option = {
+		name = "engineering_focus_propulsion"
+
+		policy_flags = {
+			engineering_focus_propulsion
+		}
+
+		modifier = {
+			category_propulsion_research_speed_mult = 0.15
+			category_propulsion_draw_chance_mult = 0.25
+		}
+
+		AI_weight = {
+			factor = 0 #This should make sure AIs don't use this policy
+		}
+	}
+
+	option = {
+		name = "engineering_focus_voidcraft"
+
+		policy_flags = {
+			engineering_focus_voidcraft
+		}
+
+		modifier = {
+			category_voidcraft_research_speed_mult = 0.15
+			category_voidcraft_draw_chance_mult = 0.25
+		}
+
+		AI_weight = {
+			factor = 0 #This should make sure AIs don't use this policy
+		}
+	}
+}
